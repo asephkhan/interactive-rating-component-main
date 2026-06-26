@@ -1,45 +1,41 @@
-/* :root {
-  --text: #6b6375;
+@font-face {
+  font-family: "Overpass", sans-serif;
+  src: url(https://fonts.google.com/specimen/Overpass);
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: "Overpass", sans-serif;
+  src: url(https://fonts.google.com/specimen/Overpass);
+  font-weight: 700;
+}
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+:root {
+  /* Primary */
+  --color-orange-500: hsl(25, 97%, 53%);
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Neutral */
+  --color-white: hsl(0, 100%, 100%);
+  --color-black: hsl(0, 0%, 0% );
+  --color-grey-500: hsl(217, 12%, 63%);
+  --color-grey-900: hsl(213, 19%, 18%);
+  --color-grey-950: hsl(216, 12%, 8%);
+  --color-gradient: hsl(215, 20%, 17%), hsl(216, 24%, 12%)
+
+  /* Spacing */
+
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-1300: 104px;
+  --spacing-1700: 136px;
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-} */
-
-/*  @media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  } 
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  } 
-} */
+} 
 
 body {
   margin: 0;
