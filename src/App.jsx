@@ -2,37 +2,40 @@ import { useState } from "react";
 import iconStar from "./assets/images/icon-star.svg";
 import "./App.css";
 
- const Circle = (props) => {
+const Circle = ({ children }) => {
+  return <div className="card__circle">{children}</div>;
+};
+
+const Button = (props) => {
   return (
-    <>
-    <div className="circle">
-  {props.content}
+    <div>
+      <button className="card__button">{props.text}</button>
     </div>
-    </>
-  )
-} 
+  );
+};
 
 const Card = () => {
   return (
     <>
       <div className="card">
-        <img className="card__star_icon" src={iconStar} alt="star icon" />
+        <Circle>
+          <img className="card__star_icon" src={iconStar} alt="star icon" />
+        </Circle>
+
         <h1>How did we do?</h1>
         <p>
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
         <div className="card__rating_score">
-        <Circle content="1" />
-        <Circle content="2" />
-        <Circle content="3" />
-        <Circle content="4" />
-        <Circle content="5" />
+          <Circle>1</Circle>
+          <Circle>2</Circle>
+          <Circle>3</Circle>
+          <Circle>4</Circle>
+          <Circle>5</Circle>
         </div>
 
-
-        
-        <button>Submit</button>
+        <Button text="SUBMIT" />
       </div>
     </>
   );
