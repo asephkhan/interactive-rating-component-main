@@ -1,0 +1,37 @@
+.card {
+  background: linear-gradient(180deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+  width: min(100%, 360px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: centers;
+  padding: var(--spacing-300);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.card__star_icon {
+    height: var(--spacing-500);
+    width: var(--spacing-500);
+
+}
+
+.card h1 {
+    color: var(--color-white);
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--color-grey-500);
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+}
+
+.circle {
+    color: var(--color-grey-500);
+}
+
+.card__rating_score {
+    display: flex;
+}

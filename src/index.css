@@ -16,11 +16,12 @@
 
   /* Neutral */
   --color-white: hsl(0, 100%, 100%);
-  --color-black: hsl(0, 0%, 0% );
+  --color-black: hsl(0, 0%, 0%);
   --color-grey-500: hsl(217, 12%, 63%);
   --color-grey-900: hsl(213, 19%, 18%);
   --color-grey-950: hsl(216, 12%, 8%);
-  --color-gradient: hsl(215, 20%, 17%), hsl(216, 24%, 12%)
+  --color-gradient-start: hsl(215, 20%, 17%);
+  --color-gradient-end: hsl(216, 24%, 12%);
 
   /* Spacing */
 
@@ -39,6 +40,11 @@
 
 body {
   margin: 0;
+  background-color: var(--color-black);
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
