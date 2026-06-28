@@ -42,6 +42,15 @@
   background-color: var(--color-grey-900);
   border-radius: 50%;
   margin-bottom: var(--spacing-300);
+  font-family: "Overpass", sans-serif;
+  
+}
+
+.card__circle:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: "Overpass", sans-serif;
+
 }
 
 .card__rating_score {
