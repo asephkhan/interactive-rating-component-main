@@ -1,6 +1,6 @@
 import { useState } from "react";
 import iconStar from "./assets/images/icon-star.svg";
-import thankyouimage from "./assets/images/illustration-thank-you.svg"
+import thankyouimage from "./assets/images/illustration-thank-you.svg";
 import "./App.css";
 
 const Circle = ({ children, onClick, selectedValue }) => {
@@ -48,14 +48,13 @@ const Card = ({ selected, onSelect }) => {
 
 const ThankYouCard = ({ selected }) => {
   return (
-    <div className="card">
-      <img src={thankyouimage} alt="" />
+    <div className="card" style={{ textAlign: "center" }}>
+      <img  className="card__image" src={thankyouimage} alt="" />
+      <p className="card__rating_result" /* style={{color: "orange-500"}} */>You selected {selected} out of 5 </p>
+      <h1>Thank you!</h1>{" "}
       <p>
-        You selected {selected} out of 5<h1>Thank you!</h1>{" "}
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
       </p>
     </div>
   );

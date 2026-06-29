@@ -8,7 +8,10 @@
   padding: var(--spacing-300);
   border-radius: 15px;
   margin: 0 auto;
+  
 }
+
+
 
 .card__star_icon {
     height: var(--spacing-250);
@@ -75,3 +78,21 @@
 .thankyou__card {
     color: var(--color-grey-500);
 }
+
+.card__image {
+    width: 160px;
+    height: 100;
+    padding: 10px 90px;
+    margin-top: 5px;
+}
+
+.card__rating_result{
+    background-color: var(--color-grey-900);
+    color: var(--color-orange-500)!important ;
+    border-radius: 22.5px;
+    padding: 5px 20px;
+    margin: 20px auto 0 auto;
+  
+}
+
+
