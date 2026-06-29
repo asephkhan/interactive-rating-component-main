@@ -1,5 +1,6 @@
 import { useState } from "react";
 import iconStar from "./assets/images/icon-star.svg";
+import thankyouimage from "./assets/images/illustration-thank-you.svg"
 import "./App.css";
 
 const Circle = ({ children, onClick, selectedValue }) => {
@@ -45,17 +46,20 @@ const Card = ({ selected, onSelect }) => {
   );
 };
 
-const ThankYouCard = ({selected}) => {
+const ThankYouCard = ({ selected }) => {
   return (
-      <div className="card">
+    <div className="card">
+      <img src={thankyouimage} alt="" />
+      <p>
+        You selected {selected} out of 5<h1>Thank you!</h1>{" "}
         <p>
-          You selected {selected} out of 5 Thank you! We appreciate you taking
-          the time to give a rating. If you ever need more support, don’t
-          hesitate to get in touch!
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
         </p>
-      </div>
-  )
-}
+      </p>
+    </div>
+  );
+};
 
 function App() {
   const [selected, setSelected] = useState(0);
