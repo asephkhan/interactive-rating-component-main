@@ -2,8 +2,12 @@ import { useState } from "react";
 import iconStar from "./assets/images/icon-star.svg";
 import "./App.css";
 
-const Circle = ({ children }) => {
-  return <div className="card__circle">{children}</div>;
+const Circle = ({ children, onClick, selectedValue }) => {
+  return (
+    <button className="card__circle" onClick={() => onClick(selectedValue)}>
+      {children}
+    </button>
+  );
 };
 
 const Button = (props) => {
@@ -14,7 +18,7 @@ const Button = (props) => {
   );
 };
 
-const Card = () => {
+const Card = ({ selected, onSelect }) => {
   return (
     <>
       <div className="card">
@@ -28,11 +32,11 @@ const Card = () => {
           is appreciated to help us improve our offering!
         </p>
         <div className="card__rating_score">
-          <Circle>1</Circle>
-          <Circle>2</Circle>
-          <Circle>3</Circle>
-          <Circle>4</Circle>
-          <Circle>5</Circle>
+          {[1, 2, 3, 4, 5].map((value) => (
+            <Circle key={value} onClick={onSelect} selectedValue={value}>
+              {value}
+            </Circle>
+          ))}
         </div>
 
         <Button text="SUBMIT" />
@@ -41,27 +45,35 @@ const Card = () => {
   );
 };
 
-function App() {
+const ThankYouCard = ({selected}) => {
   return (
-    <>
-      <body>
-        {/*  Rating state start  */}
-        <Card />
-        {/*  Rating state end  */}
-        {/* <!-- Thank you state start --> */}
-        You selected {/* <!-- Add rating here -->  */}out of 5 Thank you! We
-        appreciate you taking the time to give a rating. If you ever need more
-        support, don’t hesitate to get in touch!
-        {/* <!-- Thank you state end --> */}
-        <footer class="attribution">
-          Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge">
-            Frontend Mentor
-          </a>
-          . Coded by <a href="#">Your Name Here</a>.
-        </footer>
-      </body>
-    </>
+      <div className="card">
+        <p>
+          You selected {selected} out of 5 Thank you! We appreciate you taking
+          the time to give a rating. If you ever need more support, don’t
+          hesitate to get in touch!
+        </p>
+      </div>
+  )
+}
+
+function App() {
+  const [selected, setSelected] = useState(0);
+  console.log("selected", selected);
+
+  const handleSelect = (value) => {
+    setSelected(value);
+  };
+
+  return (
+    <div>
+      {/*  Rating state start  */}
+      <Card selected={selected} onSelect={handleSelect} />
+      {/*  Rating state end  */}
+      {/* <!-- Thank you state start --> */}
+      <ThankYouCard selected={selected} />
+      {/* <!-- Thank you state end --> */}
+    </div>
   );
 }
 

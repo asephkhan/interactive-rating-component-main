@@ -71,3 +71,7 @@
     font-weight: 700;
     letter-spacing: 1px;
 }
+
+.thankyou__card {
+    color: var(--color-grey-500);
+}
